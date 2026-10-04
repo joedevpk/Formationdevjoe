@@ -1,0 +1,5 @@
+jdc-script.ttf est un sous-ensemble latin de « TeX Gyre Chorus » (Medium Italic),
+© GUST e-foundry, distribuée sous la GUST Font License (GFL) — licence libre qui autorise
+l'utilisation, la redistribution et l'incorporation dans des documents (dont des PDF).
+Police modifiée (sous-ensemble + conversion en contours TrueType) : renommer si redistribuée seule.
+http://www.gust.org.pl/projects/e-foundry/tex-gyre/

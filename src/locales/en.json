@@ -1,0 +1,11 @@
+{
+  "brand": { "name": "JOE DEV CODES", "signature": "Developer • Trainer • Student • Entrepreneur", "tagline": "I learn, I build, I share." },
+  "nav": {
+    "home": "Home", "about": "About", "courses": "Courses", "path": "Path", "projects": "Projects",
+    "vibe": "Vibe Coding", "resources": "Resources", "workshops": "Workshops", "contact": "Contact",
+    "articles": "Notes", "services": "Services", "learn": "Learn", "idea": "From idea to product", "pitch": "Pitch Lab"
+  },
+  "cta": { "startLearning": "Start learning", "seeProjects": "See my projects", "discoverCourses": "Discover the courses", "portfolio": "View my portfolio", "talk": "Talk about my project", "login": "Sign in", "register": "Create an account", "mySpace": "My space", "logout": "Sign out" },
+  "common": { "loading": "Loading…", "error": "Something went wrong.", "empty": "Nothing to show yet.", "retry": "Retry", "search": "Search", "all": "All", "save": "Save", "cancel": "Cancel", "delete": "Delete", "edit": "Edit", "create": "Create", "back": "Back" },
+  "footer": { "rights": "All rights reserved." }
+}

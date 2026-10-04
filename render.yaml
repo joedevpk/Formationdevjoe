@@ -1,0 +1,42 @@
+services:
+  - type: web
+    name: joe-dev-codes
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    # Réécriture SPA : toute route (/formations/xyz, /app…) sert index.html
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: Permissions-Policy
+        value: camera=(), microphone=(), geolocation=()
+      # Assets Vite fingerprintés : cache long. Les photos ne sont pas fingerprintées : cache modéré.
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /photos/*
+        name: Cache-Control
+        value: public, max-age=2592000
+    envVars:
+      # Ces deux valeurs sont publiques (anon key) ; à saisir dans le dashboard Render, pas dans Git.
+      - key: VITE_SUPABASE_URL
+        sync: false
+      - key: VITE_SUPABASE_ANON_KEY
+        sync: false
+      # URL publique du site (ex. https://joe-dev-codes.onrender.com) : sitemap + image de partage absolue.
+      - key: SITE_URL
+        sync: false
+      - key: NODE_VERSION
+        value: 20
